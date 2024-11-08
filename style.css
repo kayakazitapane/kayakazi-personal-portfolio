@@ -1,0 +1,366 @@
+body{
+    background:black;
+    color:beige;
+}
+
+*{
+   margin:0; 
+   padding: 0;
+   font-family:'Poppins' ,sans-serif;
+}
+html{
+  scroll-behavior: smooth;  
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position:right;
+    background-size: contain;
+}
+
+.container{
+    padding :10px 10%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+nav ul li{
+    list-style: none;
+    display:inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a{
+    color:aqua;
+    text-decoration: none;
+    font-size: 20px;
+    position:relative;
+}
+nav ul li a:after{
+    content:'';
+    width:0;
+    height:5px;
+    background:rgb(73, 0, 82) ;
+    position:absolute;
+    left:0;
+    bottom:-2px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+   margin-top:200px;
+   font-size:30px;
+}
+.header-text h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: #272142;
+   
+}
+.header-text h1 span{
+    color:darksalmon;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 90%; /* Background color for visibility */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    box-shadow: pink; /* Optional shadow for depth */
+}
+
+.fixed-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fixed-nav li a {
+    text-decoration: none;
+    color: #333; /* Change to your preferred color */
+    padding: 10px;
+}
+
+body {
+    padding-top: 50px; /* Adjust this based on nav height to avoid content overlap */
+}
+
+
+
+
+
+/*---About---*/
+
+ .btn.btn2{
+    display: inline-block;
+    background: #001868;
+ }
+#about{
+padding:80px;
+color:#ababab;
+
+}
+.row{
+  display: flex;  
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis:35%;
+
+}
+.about-col-1 img{
+   width: 150%;
+   border-radius: 70px;
+}
+
+.about-col-2{
+    flex-basis:40%;
+}
+
+
+/*---Skills---*/
+
+#Skills{
+    padding:80px;
+    color:#ababab;
+    
+    }
+.section-header {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.inline-sections {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.inline-sections div {
+    font-size: 18px;
+}
+
+.inline-sections ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left; /* Aligns list items to the left */
+}
+.colour{
+    background-color: pink;
+}
+strong{
+    font-style: italic;
+    color: #007BFF; /* Change this color to any you like */ 
+}
+
+
+
+/*-----Project----*/
+#project{
+    padding:50px 0;
+}
+
+.work-list {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,(250px,1fr));
+    display: flex;
+    gap:40px; /* Space between each .work div */
+}
+.work{
+    border-radius: 10px;
+    position:relative;
+    overflow:hidden;
+}
+.work img {
+    width: 400px; /* Adjust the width to make the images smaller */
+    height: auto; /* Maintain the image's aspect ratio */
+    object-fit:contain;
+    border-radius: 10px;
+    display:block;
+    transition:transform 0.5s;
+}
+
+.layer{
+    width:100%;
+    height:0%;
+    background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10ps;
+    position: absolute;
+    left:0;
+    bottom:0;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size:14px ;
+    transition: height 0.5s;
+
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom:20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width:60px;
+    height:60px;
+    border-radius: 50px;
+    text-align: center;
+
+
+}
+
+.work:hover img{
+  transform:scale(1.1);
+}
+.work:hover .layer{
+  height:100%;
+}
+
+
+
+
+/*------SERVICES----*/
+#services{
+    padding: 30px 0;
+}
+.sub-title{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap:40px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+}
+.services-list {
+    display: flex;
+    gap:40px; /* Space between each service item */
+    padding-top: 50px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;/* Aligns items to the left */
+    padding:5px;
+    border: 1px solid #ccc; /* Optional border for visual separation */
+    background:pink;
+    font-weight: 300;
+    border-radius: 10px;
+    transition:background 0.5s, transform 0,5s;
+   
+}
+
+.service-item h2, .service-item h3 {
+    margin: 0 0 10px; /* Space below header */
+}
+
+.service-item p {
+    margin: 0 0 10px; /* Space below paragraph */
+}
+.service-item i{
+    font-size: 50px;
+    margin-bottom:30px ;
+}
+.service-item h2,h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.service-item:hover{
+    background:#333;
+    transition: translateY(10px);
+}
+
+
+/*------CONTACT----*/
+
+.contact-left{
+    flex-basis:35%;
+}
+.contact-right{
+    flex-basis:60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#ababab;
+    display:inline-block;
+    transition:transform 0.5s;
+}
+.social-icons a:hover{
+    color:#001868;
+    transform: translate(-5px);
+}
+
+.contact-right form{
+  width:100%;
+
+}
+form input,form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background: goldenrod;
+    padding:15px;
+    margin :15px 0;
+    color:#fff;
+    font-size:18px;
+    border-radius: 6px;
+}
+.form.btn2{
+    padding:14px 60px;
+    font-size:18px;
+    margin-top:20px ;
+    cursor:pointer;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color:forestgreen;
+    font-size: 20px; /* Corrected font-size to a valid size */
+    margin-top: 20px;
+    color: #ffffff; /* Adds text color to make it visible on dark background */
+}
+
+
